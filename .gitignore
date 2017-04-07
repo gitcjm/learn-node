@@ -3,5 +3,5 @@
 # modified@2017-4-7
 
 .idea
-node_modules/
-!node_modules/cjmlib/
+./node_modules/
+!./node_modules/cjmlib/
