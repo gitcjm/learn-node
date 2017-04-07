@@ -2,10 +2,10 @@ var age = 18;
 var showName = function () {
     console.log('I am cuijunming');
 };
-var phone = 2081027;
 var showPhone = function () {
     console.log(phone);
 };
+var phone = 2081027;
 //向build.js中写入两句测试代码
 showName();
 console.log(age);

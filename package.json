@@ -1,16 +1,25 @@
 {
   "name": "mynode",
   "version": "1.0.0",
-  "description": "",
+  "description": "沈逸的实战教程",
   "main": "build.js",
   "dependencies": {
-    "jquery": "^3.2.1",
-    "slib": "^1.0.0"
+    "cjmlib": "^1.0.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitcjm/learn-node.git"
+  },
   "author": "cjm",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitcjm/learn-node/issues"
+  },
+  "homepage": "https://github.com/gitcjm/learn-node#readme"
 }

@@ -70,5 +70,5 @@ file.readFile("./a.css", function (err, data) {
         file.appendFile('build.js', 'document.write("<style>' + data + '</style>");');
     });
     // 因为是异步读取图片文件，所以下面的data还不是base64编码
-    console.log(data);
+    //console.log(data);
 });
