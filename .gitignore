@@ -4,4 +4,4 @@
 
 .idea
 node_modules/
-!node_modules/slib
+!node_modules/cjmlib

@@ -2,7 +2,7 @@
  * Created by cjm on 7/17/16.
  */
 
-var getlib = require('slib');
+var getlib = require('cjmlib');
 var getOtherLib = require('./myOtherLib.js');
 
 // 调用getlib对象中的方法

@@ -1,4 +1,4 @@
-var getlib = require('slib');
+var getlib = require('cjmlib');
 
 //console.log(global);
 //console.log(global.process.mainModule.children);

@@ -1,4 +1,4 @@
-var getlib = require('slib');
+var getlib = require('cjmlib');
 
 for (var attrib in getlib) {
 	if (attrib != 'age')
