@@ -2,9 +2,11 @@
  * Created by cjm on 4/7/17.
  */
 
-var gulp = require('gulp'),
-    minify = require('gulp-minify'),
-    uglify = require('gulp-uglify');
+var gulp = require('gulp');
+var minify = require('gulp-minify');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var gzip = require('gulp-gzip');
 
 gulp.task('mytask', function () {
     // console.log('我的第一个默认任务');
@@ -25,5 +27,20 @@ gulp.task('mytask', function () {
         .pipe(minify())
         .pipe(gulp.dest('./js'));
 
+    // 使用concat将所有文件合并
+    gulp.src(['*.js', '!gulpfile.js', '!build.js'])
+        .pipe(concat('all.js'))
+        //.pipe(uglify())
+        .pipe(gulp.dest('./dest'));
+
+    //
+    gulp.src(['*.js', '!gulpfile.js', '!build.js'])
+        .pipe(concat('all.js'))
+        .pipe(uglify())
+        .pipe(gzip())
+        .pipe(gulp.dest('./dest'));
+
+
 });
+
 

@@ -1,3 +1,7 @@
+/**
+ * 使用 global 全局变量获取所有引用的模块 
+ */
+
 var getlib = require('cjmlib');
 
 //console.log(global);
