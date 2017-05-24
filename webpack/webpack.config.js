@@ -4,7 +4,6 @@
 
 module.exports = {
     entry: [
-        // entry是入口文件, 可以有多个
         './entry.js'
     ],
     output: {

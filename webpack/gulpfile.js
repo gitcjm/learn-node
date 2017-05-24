@@ -2,6 +2,8 @@
  * Created by cjm on 5/22/17.
  */
 
+// gulp-webpack 学习, 重点是 webpack 的配置文件
+
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var gulp_webpack = require('gulp-webpack');
@@ -14,3 +16,20 @@ gulp.task('cjmtask', function () {
         .pipe(uglify())
         .pipe(gulp.dest('./build/js'));
 });
+
+// gulp-template 学习
+
+var gulp_tpl = require('gulp-template');
+var concat = require('gulp-concat');
+var paths = {
+    htmls: ['src/header.html','src/index_tpl.html', 'src/footer.html']
+};
+
+gulp.task('onepage', function () {
+    gulp.src(paths.htmls)
+        .pipe(concat('onepage.html'))
+        .pipe(gulp_tpl({
+            'age': 18
+        }))
+        .pipe(gulp.dest('./build/html'));
+})
