@@ -19,9 +19,19 @@ var fs = require('fs');
 // request.get('http://localhost:8090/fornode/news.php')
 //     .pipe(request.put('http://localhost:8090/news.php'));
 
-request.get('http://localhost:8090/fornode/news.php',
-    function(error, response, body){
-        if (!error && response.statusCode == 200) {
-            console.log(body);
-        }
-    });
+// request.get('http://localhost:8090/fornode/news.php',
+//     function(error, response, body){
+//         if (!error && response.statusCode == 200) {
+//             console.log(body);
+//         }
+//     });
+
+var _clib2 = require('cjmlib2');
+
+var loadbody = function(body) {
+    console.log(body);
+}
+
+_clib2.loadNews(loadbody);
+
+
