@@ -4,4 +4,4 @@
 
 .idea
 node_modules/
-!./node_modules/cjmlib/
+!./node_modules/cjmlib*/
