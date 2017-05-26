@@ -48,3 +48,21 @@ gulp.task('news', function(){
             .pipe(gulp.dest('./build/html'));
     });
 });
+
+// ejs 新闻列表
+
+gulp.task('news2', function(){
+    
+    var _clib2 = require('cjmlib2');
+    var rename = require('gulp-rename');
+    var ejs = require('gulp-ejs');
+
+    _clib2.loadNews(function (body) {
+        var news = JSON.parse(body);
+        gulp.src(['src/news_tpl.html'])
+            .pipe(ejs(news))
+            .pipe(rename(news.id + '_ejs.html'))
+            .pipe(gulp.dest('./build/html'));
+    });
+});
+
