@@ -2,9 +2,9 @@
  * Created by cjm on 5/22/17.
  */
 
-// var getlib = require("cjmlib");
+var getlib = require("cjmlib");
 
-// alert(getlib.age);
+console.log(getlib.age);
 
 // 我的试验,这个试验和目前学习内容无关
 // var request = require('request');
