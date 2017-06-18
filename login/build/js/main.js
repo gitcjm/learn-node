@@ -1,14 +1,14 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(7);
+	module.exports = __webpack_require__(10);
 
 
 /***/ },
 
-/***/ 7:
+/***/ 10:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22,13 +22,13 @@ webpackJsonp([1],{
 	    alert('登录测试');
 	};*/
 
-	__webpack_require__(8);
+	__webpack_require__(11);
 
 	alert('欢迎来到程序员在迥途');
 
 /***/ },
 
-/***/ 8:
+/***/ 11:
 /***/ function(module, exports) {
 
 	// removed by extract-text-plus-webpack-plugin

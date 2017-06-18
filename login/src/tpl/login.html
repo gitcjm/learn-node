@@ -8,11 +8,13 @@
 <body>
     <h2>用户登录</h2>
 
+    <form id="userfrm">
     <div>
         用户名
     </div>
     <div>
-        <input type="text" id="txtUserLogin"/>
+        <input type="text" id="txtUserLogin" required />
+        <span id="lenMsg"></span>
     </div>
 
     <div>
@@ -23,9 +25,9 @@
     </div>
 
     <div>
-        <button id="cmdLogin" class="redBtn">登录</button>
+        <button id="cmdLogin" class="redBtn" type="submit">登录</button>
         <button id="cmdReg" class="greenBtn">注册</button>
     </div>
-
+    </form>
 </body>
 </html>

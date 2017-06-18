@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
-<link href="../js/user.css?62021c744f4d67adf748" rel="stylesheet"><link href="../js/main.css?62021c744f4d67adf748" rel="stylesheet"></head>
+<link href="../js/user.css?a665916b01a2a66318b1" rel="stylesheet"><link href="../js/main.css?a665916b01a2a66318b1" rel="stylesheet"></head>
 <body>
     <h2>用户登录</h2>
 
+    <form id="userfrm">
     <div>
         用户名
     </div>
     <div>
-        <input type="text" id="txtUserLogin"/>
+        <input type="text" id="txtUserLogin" required />
+        <span id="lenMsg"></span>
     </div>
 
     <div>
@@ -23,9 +25,9 @@
     </div>
 
     <div>
-        <button id="cmdLogin" class="redBtn">登录</button>
+        <button id="cmdLogin" class="redBtn" type="submit">登录</button>
         <button id="cmdReg" class="greenBtn">注册</button>
     </div>
-
-<script type="text/javascript" src="../js/commons.js?62021c744f4d67adf748"></script><script type="text/javascript" src="../js/user.js?62021c744f4d67adf748"></script><script type="text/javascript" src="../js/main.js?62021c744f4d67adf748"></script></body>
+    </form>
+<script type="text/javascript" src="../js/jqp.js?a665916b01a2a66318b1"></script><script type="text/javascript" src="../js/commons.js?a665916b01a2a66318b1"></script><script type="text/javascript" src="../js/user.js?a665916b01a2a66318b1"></script><script type="text/javascript" src="../js/main.js?a665916b01a2a66318b1"></script></body>
 </html>
