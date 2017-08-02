@@ -8,11 +8,11 @@ var ExtractTextPlusPlugin = require('extract-text-plus-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: ['./src/js/main.js'],
-        user: ['./src/js/login.js', './src/js/register.js'],
-        index: ['./src/js/index.js'],
-        jq_plugins: ['./src/lib/jquery.validate.min.js', './src/lib/jquery.formInputLetter.js']
-    },
+/*        main: ['./src/modules/main/main.js'],
+        user: ['./src/modules/user/login.js', './src/modules/user/register.js'],
+        index: ['./src/modules/index/index.js'],
+        jq_plugins: ['./src/modules/jq_plugins/jquery.validate.min.js', './src/modules/jq_plugins/jquery.formInputLetter.js']
+ */   },
     output: {
         path: __dirname + '/build/js',
         filename: '[name].js'
@@ -23,10 +23,18 @@ module.exports = {
         // 或者 'jquery':'jQuery'
     },
     //externals: /^(jquery|\$)$/i,
+
     module: {
         loaders: [
             //{test: /\.css$/, loaders: ['style-loader', 'css-loader']},
-            {test: /\.css$/, loader: ExtractTextPlusPlugin.extract('style-loader', 'css-loader')}
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlusPlugin.extract('style-loader', 'css-loader')
+            },
+            /*{// 也可以在引用时注明加载器, 而无需在此配置
+                test: /\.include$/,
+                loader: 'raw-loader'
+            }*/
         ]
     },
     plugins: [
@@ -36,8 +44,12 @@ module.exports = {
             template: __dirname + '/src/tpl/login.html',
             inject: 'body',
             hash: true,
-            chunks: ['main', 'user', 'commons', 'jq_plugins']
             // 因为jq_plugins从user中已经抽离出来，所以这儿要将其添加到chunks中
+            chunks: ['main', 'user', 'commons', 'jq_plugins'],
+            // 使用nodejs读取文件,而不使用raw-loader插件
+            include: {
+                header: require('fs').readFileSync('./src/tpl/header.include')
+            }
         }),
         new HtmlWebpackPlugin({
             filename: __dirname + '/build/html/index.html',
@@ -54,12 +66,12 @@ module.exports = {
         // 把业务模块分开打包
         /*new webpack.optimize.CommonsChunkPlugin({
             name: 'user',
-            filename: 'user.js'
+            filename: 'user.modules'
         }),*/
         // 分离公共JS资源
         new webpack.optimize.CommonsChunkPlugin({
             name: 'commons',
-            //filename: 'commons.js', // 可以忽略,因为output中已有[name]占位符
+            //filename: 'commons.modules', // 可以忽略,因为output中已有[name]占位符
             chunks: ['main', 'user', 'index']
         }),
         // 将第三方插件单独打包

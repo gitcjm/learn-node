@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(10);
 
 
-/***/ },
+/***/ }),
 
 /***/ 10:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by cjm on 6/1/17.
@@ -26,13 +26,13 @@ webpackJsonp([2],{
 
 	alert('欢迎来到程序员在迥途');
 
-/***/ },
+/***/ }),
 
 /***/ 11:
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	// removed by extract-text-plus-webpack-plugin
 
-/***/ }
+/***/ })
 
 });

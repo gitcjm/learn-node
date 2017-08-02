@@ -4,7 +4,7 @@ webpackJsonp([4],[
 /* 2 */,
 /* 3 */,
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -84,9 +84,9 @@ webpackJsonp([4],[
 	}
 
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -443,9 +443,9 @@ webpackJsonp([4],[
 	}
 
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	
 	/**
@@ -538,5 +538,5 @@ webpackJsonp([4],[
 	};
 
 
-/***/ }
+/***/ })
 ]);

@@ -16,7 +16,7 @@ for(var obj in getlib){
     console.log(getlib[obj]);
 }
 
-/* 生成编译文件build.js */
+/* 生成编译文件build.modules */
 
 var file = require('fs');
 file.writeFile('build.js', '');
@@ -28,13 +28,13 @@ function genJSCode(key, value) {
 
 // 读取getlib对象,并将其组装成JS代码
 //for(var attrib in getlib) {
-//    file.appendFile('build.js', genJSCode(attrib, getlib[attrib]));
+//    file.appendFile('build.modules', genJSCode(attrib, getlib[attrib]));
 //}
 
 // 获取getlib对象的另一种方法
 //var imObject = global.process.mainModule.children[0].exports;
 //for (var attr in imObject) {
-//    file.appendFile('build.js', genJSCode(attr, imObject[attr]));
+//    file.appendFile('build.modules', genJSCode(attr, imObject[attr]));
 //}
 
 // 获取所有导入的库

@@ -6,8 +6,20 @@
     <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
 </head>
 <body>
-    <h2>用户登录</h2>
+    <div id="header">
+        <!-- nodejs方式加载外部文件 -->
+        <%= htmlWebpackPlugin.options.include.header %>
+    </div>
 
+    <div id="hot">
+        <!-- raw-loader方式加载外部文件 -->
+        <% var hots = JSON.parse(require('raw-loader!../remote/hots.json')) %>
+        <% hots.forEach(function(item) { %>
+            <a href="<%= item.href %>" target="_blank"><%= item.title %></a>
+        <% }) %>
+    </div>
+
+    <h2>用户登录</h2>
     <form id="userfrm">
     <div>
         用户名

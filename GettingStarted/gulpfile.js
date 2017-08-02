@@ -12,7 +12,7 @@ gulp.task('mytask', function () {
     // console.log('我的第一个默认任务');
     
     gulp.src(['*.js', '!gulpfile.js'])
-        .pipe(gulp.dest('./build/js'));
+        .pipe(gulp.dest('./build/modules'));
 
     gulp.src('*.css')
         .pipe(gulp.dest('./build/css'));
@@ -20,12 +20,12 @@ gulp.task('mytask', function () {
     // 使用uglify()后，只产生一个压缩文件
     gulp.src('build.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./modules'));
 
     // 使用minify()后，产生两个文件，原文件和源文件-min版
     gulp.src('cjm.js')
         .pipe(minify())
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./modules'));
 
     // 使用concat将所有文件合并
     gulp.src(['*.js', '!gulpfile.js', '!build.js'])

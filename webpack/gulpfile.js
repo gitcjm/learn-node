@@ -14,7 +14,7 @@ gulp.task('cjmtask', function () {
     gulp.src(['entry.js'])
         .pipe(gulp_webpack(webpack_config, webpack))
         .pipe(uglify())
-        .pipe(gulp.dest('./build/js'));
+        .pipe(gulp.dest('./build/modules'));
 });
 
 // gulp-template 学习
@@ -22,7 +22,7 @@ gulp.task('cjmtask', function () {
 var gulp_tpl = require('gulp-template');
 var concat = require('gulp-concat');
 var paths = {
-    htmls: ['src/header.html','src/index_tpl.html', 'src/footer.html']
+    htmls: ['src/header.include','src/index_tpl.html', 'src/footer.html']
 };
 gulp.task('onepage', function () {
     gulp.src(paths.htmls)

@@ -7,7 +7,7 @@ module.exports = {
         './entry.js'
     ],
     output: {
-        path: __dirname + '/build/js',
+        path: __dirname + '/build/modules',
         filename: 'build.js'
     }
 }
